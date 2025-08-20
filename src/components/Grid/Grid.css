@@ -1,0 +1,164 @@
+.operations{
+    padding: 30px 45px 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: black;
+}
+
+.operations .box{
+    display: flex;
+    justify-content: center;
+    border: 1.5px solid white;
+    border-radius: 6px;
+    padding: 15px;
+    position: relative;
+}
+
+.operations .box .heading{
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    color: white;
+    top: -15px;
+    background-color: black;
+    padding: 0 10px;
+}
+
+.operations .box button{
+    font-size: 14px;
+    padding: 1px 7px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: aliceblue;
+    margin-right: 5px;
+}
+
+.operations .box button:hover{
+    background-color: rgb(78, 216, 250);
+    color: white;
+}
+
+.operations .box .active{
+    background-color: rgb(78, 216, 250);
+    color: white;
+}
+
+.grid-container{
+    padding-bottom: 30px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    aspect-ratio : 3/1;
+  }
+  
+.table-container{
+  width: calc(100% - 90px);
+  margin: auto;
+}
+
+td{
+    border: 2px solid rgb(66, 65, 65);
+    width: 5px;
+    height: 5px;
+    position: relative;
+}
+
+
+@media screen and (max-width: 900px) {
+    .operations{
+        margin: 0 15px ;
+    }px
+
+    table{
+        width: calc(100% - 15px);
+        height: 50%;
+      }
+    }
+    
+.node-visited {
+  animation-name: visitedAnimation;
+  animation-duration: 0.45s;
+  animation-timing-function: ease-out; /* Specifies an animation with a slow end */
+  background-color: #a1a1aa;
+}
+
+.node-shortestPath div{
+  animation-name: shortestPathAnimation;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  background-color: #f1ea4f;
+  border-radius: 20%;
+  margin: auto;
+  position: relative !important;
+  width: 80% !important;
+  height: 80% !important;
+}
+
+.node-wall {
+  animation-name: blockFill;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+  background-color: brown;
+}
+
+@keyframes pathFill {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+  
+@keyframes blockFill {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+  
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.4);
+    background-color: #71717a;
+    border-radius: 100%;
+  }
+  25% {
+    background-color: #fef08a;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #fef9c3;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #a8a29e;
+  }
+}
+  
+
+.tooltip-inner {
+    background-color: rgb(196, 248, 65) !important;
+    opacity: 1 !important;
+    border: 1px dashed black;
+    color: black ;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: rgb(196, 248, 65) !important;
+}
