@@ -375,7 +375,7 @@ export default function Grid(){
     async function animateAlgorithmPath(shortestPath) {
         const delay = 20;
     
-        for (let i = 1; i < shortestPath.length; i++) {
+        for (let i = 1; i < shortestPath.length-1; i++) {
             await new Promise(res => setTimeout(res, delay));
             const [r, c] = shortestPath[i];
     
